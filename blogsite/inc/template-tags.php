@@ -475,7 +475,7 @@ function blogsite_notice() {
 
     $theme = wp_get_theme();
 
-    echo '<div class="notice notice-success is-dismissible"><p>'. esc_html('Thank you for installing the BlogSite theme!','blogsite') . '</p><p><a class="button-secondary" href="' . esc_url( $theme->get( 'ThemeURI' ) ) . '" target="_blank">' . esc_html( 'Theme Demo', 'blogsite' ) . '</a> '. '&nbsp;' . ' <a class="button-primary" href="' . esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ) . '" target="_blank">' . esc_html( 'Upgrade to PRO theme', 'blogsite' ) . '</a></p></div>';
+    echo '<div class="notice notice-success is-dismissible"><p>'. esc_html('You are using BlogSite Free Version. Please upgrade to BlogSite Pro Version to use more advanced features.','blogsite') . '</p><p>' . esc_html('Only Available in Pro Version: 1. Theme Options Panel &nbsp; 2. One Click Demo Import &nbsp; 3. 1000+ Google Fonts &nbsp; 4. Unlimited Color Schemes &nbsp; 5. Advertise Management &nbsp; 6. Social Share Icons for Posts &nbsp; 7. Header Search on Mobile ...and much more!','blogsite') . '<p><a class="button-secondary" href="' . esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ) . '" target="_blank">' . esc_html( 'BlogSite Pro Demo', 'blogsite' ) . '</a> '. '&nbsp;' . ' <a class="button-primary" href="' . esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ) . '" target="_blank">' . esc_html( 'Purchase BlogSite Pro for $49', 'blogsite' ) . '</a></p></div>';
 
 }
 

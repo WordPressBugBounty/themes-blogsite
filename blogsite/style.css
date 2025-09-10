@@ -1,15 +1,16 @@
+@charset "UTF-8";
 /*
 Theme Name: BlogSite
 Theme URI: https://wpenjoy.com/themes/blogsite
 Author: WPEnjoy
 Author URI: https://wpenjoy.com
-Description: BlogSite is a modern and clean WordPress theme for content-based blogs and websites. It provides a magnificent showcase for your content, perfect for personal bloggers and content creators. Theme Demo: https://demo.wpenjoy.com/blogsite/ Documention: https://wpenjoy.com/documentation/blogsite/
-Version: 1.1.1
+Description: BlogSite is a modern, clean, and highly customizable WordPress theme designed for content-based blogs and websites. With its minimalist layout and user-friendly design, it puts your words, images, and stories at the forefront, creating a magnificent showcase for your content. Whether you’re a personal blogger, content creator, or running a niche publication, BlogSite offers the perfect balance of style and functionality. Theme Demo: https://demo.wpenjoy.com/blogsite/ Documention: https://wpenjoy.com/documentation/blogsite/
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tested up to: 6.2
-Requires at least: 4.9
-Requires PHP: 5.6
+Tested up to: 6.8
+Requires at least: 6.0
+Requires PHP: 7.0
 Text Domain: blogsite
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, sticky-post, theme-options, threaded-comments, translation-ready
 */

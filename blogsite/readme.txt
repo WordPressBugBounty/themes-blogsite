@@ -1,54 +1,20 @@
 === BlogSite ===
 Contributors: wpenjoy
-Tested up to: 6.2
-Stable tag: 1.1.1
-Requires at least: 4.9
-Requires PHP: 5.6
+Tested up to: 6.8
+Stable tag: 1.1.2
+Requires at least: 6.0
+Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-BlogSite is a modern and clean WordPress theme for content-based blogs and websites. It provides a magnificent showcase for your content, perfect for personal bloggers and content creators. Theme Demo: https://demo.wpenjoy.com/blogsite/ Documentation: https://wpenjoy.com/documentation/blogsite/
+BlogSite is a modern, clean, and highly customizable WordPress theme designed for content-based blogs and websites. With its minimalist layout and user-friendly design, it puts your words, images, and stories at the forefront, creating a magnificent showcase for your content. Whether you’re a personal blogger, content creator, or running a niche publication, BlogSite offers the perfect balance of style and functionality.
 
 == Changelog ==
 
-= 1.1.1 = July 23, 2023
-* Optimized video aspect ratio for single posts
-
-= 1.1.0 = December 10, 2022
-* Fixed CSS styling
-
-= 1.0.9 = October 17, 2022
-* Fixed issues to meet WP.org's requirements
-
-= 1.0.8 = June 18, 2022
-* Fixed layer conflicts between mobile menu and featuerd content
-
-= 1.0.7 = June 17, 2022
-* Fixed featured posts option
-* Fixed featured posts styling on full width mode
-
-= 1.0.6 = June 15, 2022
-* Added admin column for featured posts
-* Fixed bulk edit & quick edit issue for featured posts
-
-= 1.0.5 =
-* Fixed CSS styling for widgets: Calendar, Tag Cloud, Categories
-* Optimized post thumbnail size for post list
-
-= 1.0.4 =
-* Fixed header search style for Windows system
-
-= 1.0.3 =
-* Fixed footer widget color
-* Fixed errors & warnings for PHP 8
-
-= 1.0.2 =
-* Added admin notice
-
-= 1.0.1 =
-* Released: March 29, 2022
+= 1.1.2 = September 10, 2025
+* Bug fixes
 
 == Copyright ==
 

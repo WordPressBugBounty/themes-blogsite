@@ -46,7 +46,7 @@
 					$blogsite_theme = wp_get_theme();
 				?>
 
-				&copy; <?php echo esc_html( date("o") ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( get_bloginfo('name') ); ?></a> - <a target="_blank" href="<?php echo esc_url( $blogsite_theme->get( 'AuthorURI' ) ); ?>"><?php esc_html_e('WordPress Theme', 'blogsite'); ?></a> <?php esc_html_e('by', 'blogsite'); ?> <a target="_blank" href="<?php echo esc_url( $blogsite_theme->get( 'AuthorURI' ) ); ?>"><?php esc_html_e('WPEnjoy', 'blogsite'); ?></a>
+				&copy; <?php echo esc_html( date("o") ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( get_bloginfo('name') ); ?></a> - <a target="_blank" href="<?php echo esc_url( $blogsite_theme->get( 'ThemeURI' ) ); ?>"><?php esc_html_e('WordPress Blog Theme', 'blogsite'); ?></a> <?php esc_html_e('by', 'blogsite'); ?> <a target="_blank" href="<?php echo esc_url( $blogsite_theme->get( 'AuthorURI' ) ); ?>"><?php esc_html_e('WPEnjoy', 'blogsite'); ?></a>
 			</div><!-- .site-info -->
 
 			</div><!-- .container -->
