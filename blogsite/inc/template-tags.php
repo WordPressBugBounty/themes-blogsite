@@ -468,18 +468,140 @@ function blogsite_categories_postcount_filter ($variable) {
 }
 add_filter('wp_list_categories','blogsite_categories_postcount_filter');
 
-/*
- * Admin Notice
+/**
+ * Pro upgrade notice
  */
-function blogsite_notice() {
+function blogsite_pro_upgrade_admin_notice() {
 
-    $theme = wp_get_theme();
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return;
+    }
+    ?>
+    <div class="notice notice-info is-dismissible blogsite-pro-notice blogsite-pro-animate">
+        <div class="">
 
-    echo '<div class="notice notice-success is-dismissible"><p>'. esc_html('You are using BlogSite Free Version. Please upgrade to BlogSite Pro Version to use more advanced features.','blogsite') . '</p><p>' . esc_html('Only Available in Pro Version: 1. Theme Options Panel &nbsp; 2. One Click Demo Import &nbsp; 3. 1000+ Google Fonts &nbsp; 4. Unlimited Color Schemes &nbsp; 5. Advertise Management &nbsp; 6. Social Share Icons for Posts &nbsp; 7. Header Search on Mobile ...and much more!','blogsite') . '<p><a class="button-secondary" href="' . esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ) . '" target="_blank">' . esc_html( 'BlogSite Pro Demo', 'blogsite' ) . '</a> '. '&nbsp;' . ' <a class="button-primary" href="' . esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ) . '" target="_blank">' . esc_html( 'Purchase BlogSite Pro for $49', 'blogsite' ) . '</a></p></div>';
+            <div class="blogsite-pro-header">
+                <span class="dashicons dashicons-star-filled"></span>
+                <strong class="blogsite-pro-title">
+                    <?php esc_html_e( 'Upgrade to BlogSite Pro', 'blogsite' ); ?>
+                </strong>
+            </div>
+            <p class="blogsite-pro-desc">
+                <?php esc_html_e( 'You are currently using the free version of the BlogSite theme. Upgrade to the Pro version to unlock additional features:', 'blogsite' ); ?>
+            </p>
+            <ul class="blogsite-pro-features">
+                <li><?php esc_html_e( 'Theme Options Panel', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'One Click Demo Import', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( '1000+ Google Fonts', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'Unlimited Color Schemes', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'Header Search on Mobile', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'Post List & Single Post Options', 'blogsite' ); ?></li>                
+                <li><?php esc_html_e( 'Ad Positions Management', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'Social Share Icons for Posts', 'blogsite' ); ?></li>
+                <li><?php esc_html_e( 'Priority Theme Support and More', 'blogsite' ); ?></li>                    
+            </ul>
 
+            <div class="cta-button">
+                <?php 
+                    $theme = wp_get_theme();
+                ?>
+                <a href="<?php echo esc_url( $theme->get( 'AuthorURI' ) . '/themes/blogsite-pro' ); ?>"
+                   class="button button-primary blogsite-pro-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <?php esc_html_e( 'Upgrade to BlogSite Pro', 'blogsite' ); ?>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <?php
 }
+add_action( 'admin_notices', 'blogsite_pro_upgrade_admin_notice' );
 
-add_action('admin_notices', 'blogsite_notice');
+add_action( 'admin_enqueue_scripts', function () {
+    wp_add_inline_style(
+        'wp-admin',
+        '
+        .blogsite-pro-notice {
+            padding: 0;
+            border-left: none;
+            background: transparent;
+        }
+
+        .blogsite-pro-animate {
+            position: relative;
+            padding: 14px 18px 16px;
+            background: #fffaf3;
+            border-radius: 4px;
+        }
+
+        .blogsite-pro-animate::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-left: 6px solid #ff9800;
+            animation: blogsiteBorderPulse 2.2s ease-in-out infinite;
+        }
+
+        .blogsite-pro-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blogsite-pro-header .dashicons {
+            color: #ff9800;
+            font-size: 22px;
+        }
+
+        .blogsite-pro-title {
+            font-size: 14px;
+        }
+
+        /* Clean list styling */
+        .blogsite-pro-features {
+            list-style: none;
+            margin: 0 0 10px;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blogsite-pro-features li {
+            font-size: 13px;
+            color: #555;
+            padding-left: 20px;
+            margin: 2px 0;
+            position: relative;
+        }
+
+        .blogsite-pro-features li::before {
+            content: "\f147"; /* dashicons-yes */
+            font-family: dashicons;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #46b450;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes blogsiteBorderPulse {
+            0%   { box-shadow: 0 0 0 0 rgba(255,152,0,.35); }
+            70%  { box-shadow: 0 0 0 10px rgba(255,152,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,152,0,0); }
+        }
+        '
+    );
+});
 
 /* Admin Style */
 function blogsite_admin_init() {

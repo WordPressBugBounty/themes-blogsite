@@ -1,7 +1,7 @@
 === BlogSite ===
 Contributors: wpenjoy
-Tested up to: 6.8
-Stable tag: 1.1.2
+Tested up to: 6.9
+Stable tag: 1.1.3
 Requires at least: 6.0
 Requires PHP: 7.0
 License: GPLv2 or later
@@ -13,8 +13,8 @@ BlogSite is a modern, clean, and highly customizable WordPress theme designed fo
 
 == Changelog ==
 
-= 1.1.2 = September 10, 2025
-* Bug fixes
+= 1.1.3 =
+* Updated admin notice
 
 == Copyright ==
 
